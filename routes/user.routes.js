@@ -78,8 +78,8 @@ router.post('/login',
             })
         }
 
-        const token = jwt.sign({
-            userId: user._id,
+        const token = jwt.sign({ // this data go to the auth.js file when user is authenticate
+            userId: user._id,      //we set user Id here
             email: user.email,
             username: user.username
         },
